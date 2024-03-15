@@ -15,7 +15,8 @@ const businessSchema = new mongoose.Schema(
         },
        password:{
         type: String
-       }
+       },
+       slots: [],
     },
         
     { timestamps: true }

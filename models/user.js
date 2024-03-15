@@ -6,6 +6,7 @@ const userSchema = mongoose.Schema({
   email: String,
   password: String,
   phonenumber: String,
+  slots: []
 });
 
 // Ensure unique index on email field
