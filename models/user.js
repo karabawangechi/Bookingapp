@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
   fname: String,
@@ -9,12 +9,12 @@ const userSchema = mongoose.Schema({
 });
 
 // Ensure unique index on email field
-userSchema.index({ email: 1  ,fname: 1, eamil:1,password:1, phonenumber:1}, { unique: true });
+userSchema.index({ email: 1, fname: 1, password: 1, phonenumber: 1 }, { unique: true });
 
 const User = mongoose.model('User', userSchema);
 
 // Function to register a new user
-export const registerUser = async (userData) => {
+const registerUser = async (userData) => {
   try {
     // Create a new user instance
     const newUser = new User(userData);
@@ -26,4 +26,7 @@ export const registerUser = async (userData) => {
   }
 };
 
-export default User;
+module.exports = {
+  User,
+  registerUser
+};

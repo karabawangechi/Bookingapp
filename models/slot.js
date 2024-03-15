@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-export const businessSchema = mongoose.Schema({
+const businessSchema = mongoose.Schema({
   day: String,
   time: String,
   userID: String,
@@ -12,7 +12,7 @@ businessSchema.index({ day: 1, time: 1, userID: 1, businessID: 1 }, { unique: tr
 const Business = mongoose.model('Business', businessSchema);
 
 // Function to add a slot
-export const addSlot = async (slotData) => {
+const addSlot = async (slotData) => {
   try {
     // Create a new slot instance
     const newSlot = new Business(slotData);
@@ -24,4 +24,7 @@ export const addSlot = async (slotData) => {
   }
 };
 
-export default Business;
+module.exports = {
+  Business,
+  addSlot
+};

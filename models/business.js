@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-export const businessSchema = mongoose.Schema({
+const businessSchema = mongoose.Schema({
   name: String,
   email: String,
   password: String
@@ -11,7 +11,7 @@ businessSchema.index({ name: 1, email: 1, password: 1 }, { unique: true });
 const Business = mongoose.model('Business', businessSchema);
 
 // Function to add a new business
-export const addBusiness = async (businessData) => {
+const addBusiness = async (businessData) => {
   try {
     // Create a new business instance
     const newBusiness = new Business(businessData);
@@ -23,4 +23,10 @@ export const addBusiness = async (businessData) => {
   }
 };
 
-export default Business;
+const index=async ()=>{
+  find
+}
+module.exports = {
+  Business,
+  addBusiness
+};
