@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import app from './express.js';
+const mongoose = require ('mongoose');
+const app = require('./express.js');
 
 const url = 'mongodb+srv://paulotieno2:vzS0PqYiRk04IcN0@cluster0.g7hixbe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
