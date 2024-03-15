@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import app from './express.js';
 
-const url = '';
+const url = 'mongodb+srv://paulotieno2:vzS0PqYiRk04IcN0@cluster0.g7hixbe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.set('strictQuery', false);
 mongoose
