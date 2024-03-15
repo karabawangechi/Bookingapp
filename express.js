@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   return next();
 });
 app.get('/businesses',(req,res)=>res.send())
-app.get('/', (req, res) => {
+app.get('/businesses', (req, res) => {
   res.send('Hello World!');
 });
 
