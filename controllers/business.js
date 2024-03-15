@@ -1,15 +1,15 @@
-const Business = require ('./models/business');
+// const Business = require ('./models/business');
 
-exports.listBusinesses = (req, res) => {
-  Business.find({},(err,business)=>{
-    if (err){
-      res.status(500).send(err)
+// exports.listBusinesses = (req, res) => {
+//   Business.find({},(err,business)=>{
+//     if (err){
+//       res.status(500).send(err)
     
-    }
-    res.status(200).json(business)
-  }
-  )
-}
+//     }
+//     res.status(200).json(business)
+//   }
+//   )
+// }
 // const getBusinesses ((req, res) => {
 //   return Doctors.find({}, '-__v');
 //   res.json(businesses)
