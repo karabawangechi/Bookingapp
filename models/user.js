@@ -5,10 +5,11 @@ const userSchema = mongoose.Schema({
   lname: String,
   email: String,
   password: String,
+  phonenumber: String,
 });
 
 // Ensure unique index on email field
-userSchema.index({ email: 1 }, { unique: true });
+userSchema.index({ email: 1  ,fname: 1, eamil:1,password:1, phonenumber:1}, { unique: true });
 
 const User = mongoose.model('User', userSchema);
 
